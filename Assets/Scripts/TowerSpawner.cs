@@ -7,6 +7,13 @@ public class TowerSpawner : MonoBehaviour
 
     public void SpawnTower(Transform tileTransform)
     {
+        Tile tile = tileTransform.GetComponent<Tile>();
+
+        if (tile.IsBuildTower == true) 
+        { 
+            return;
+        }
+        tile.IsBuildTower = true;
         Instantiate(towerPrefab, tileTransform.position, Quaternion.identity);
     }
 }
