@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8109182929577580300, guid: 8b51fe5dcdc6a564995dbfc992641e35, type: 3}
-  spawnTime: 1
+  spawnTime: 0.5
   wayPoints:
   - {fileID: 1975114604}
   - {fileID: 1369125555}
@@ -4054,6 +4054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 1117503185092309067, guid: d43efd343bae65e4c9fcf7289275032a, type: 3}
+  enemySpawner: {fileID: 48273977}
 --- !u!4 &1310995166
 Transform:
   m_ObjectHideFlags: 0

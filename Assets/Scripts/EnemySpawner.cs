@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class EnemySpawner : MonoBehaviour
     private float spawnTime;  //적 생성 주기
     [SerializeField]
     private Transform[] wayPoints; //현재 스테이지 이동경로
+    private List<Enemy> enemyList;
+
+
+    public List<Enemy> EnemyList => enemyList;
 
     private void Awake()
     {
+        enemyList = new List<Enemy>();
         StartCoroutine("spawnEnemy");
     }
 
@@ -22,9 +28,16 @@ public class EnemySpawner : MonoBehaviour
             GameObject clone = Instantiate(enemyPrefab); //적 오브젝트 생성
             Enemy enemy = clone.GetComponent<Enemy>();//방금 생성된적의 ENMY컴포넌트
 
-            enemy.Setup(wayPoints);//setup호출
+            enemy.Setup(this,wayPoints);//setup호출
+            enemyList.Add(enemy);
 
             yield return new WaitForSeconds(spawnTime);
         }
+    }
+
+    public void DestroyEnemy(Enemy enemy)
+    {
+        enemyList.Remove(enemy);
+        Destroy(enemy.gameObject);
     }
 }
