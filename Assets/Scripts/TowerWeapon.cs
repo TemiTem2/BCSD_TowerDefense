@@ -8,16 +8,18 @@ public enum WeaponState { SearchTarget = 0, AttackToTarget}
 public class TowerWeapon : MonoBehaviour
 {
     [SerializeField]
-    private GameObject projectilePrefab;
+    private GameObject projectilePrefab; //발사체 프리펩
     [SerializeField]
-    private Transform spawnpoint;
+    private Transform spawnpoint; //발사체 생성 위치
     [SerializeField]
-    private float attackRate = 0.5f;
+    private float attackRate = 0.5f;//공격 속도
     [SerializeField]
-    private float attackRange = 2.0f;
-    private WeaponState weaponState = WeaponState.SearchTarget;
-    private Transform attackTarget = null;
-    private EnemySpawner enemySpawner;
+    private float attackRange = 2.0f;//공격 사거리
+    [SerializeField]
+    private int attackDamage = 1; //공격력
+    private WeaponState weaponState = WeaponState.SearchTarget;//타워ㅏ 무기의 상태
+    private Transform attackTarget = null;//공격대상
+    private EnemySpawner enemySpawner;//게임에 존재하는 적 정보 획득용
 
     public void Setup(EnemySpawner enemySpawner)
     {
@@ -106,6 +108,6 @@ public class TowerWeapon : MonoBehaviour
     {
         GameObject clone = Instantiate(projectilePrefab, spawnpoint.position, Quaternion.identity);
 
-        clone.GetComponent<projectile>().Setup(attackTarget);
+        clone.GetComponent<projectile>().Setup(attackTarget,attackDamage);
     }
 }
