@@ -37,7 +37,7 @@ public class EnemyHP : MonoBehaviour
         {
             isDie = true;
             //»ç¸Á
-            enemy.OnDie();
+            enemy.OnDie(EnemyDestroyType.Kill);
         }
     }
 
