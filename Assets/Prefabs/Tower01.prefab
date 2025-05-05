@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5848100024512886686}
   - component: {fileID: 4813807889238093311}
   - component: {fileID: 7420231137701424721}
+  - component: {fileID: -3592564475704313142}
   m_Layer: 0
   m_Name: Tower01
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +106,28 @@ MonoBehaviour:
   spawnpoint: {fileID: 8467307257470509322}
   attackRate: 0.5
   attackRange: 2
+  attackDamage: 1
+--- !u!65 &-3592564475704313142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117503185092309067}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.88, y: 0.59, z: 0.2}
+  m_Center: {x: 0.14959997, y: 0, z: 0}
 --- !u!1 &9049630300518874414
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,10 @@ public class TowerSpawner : MonoBehaviour
     {
         //타워건설 여부 확인
         //1.돈이 있는가
-        if (towerBuildGold >playerGold.CurrentGold) return;
+        if (towerBuildGold > playerGold.CurrentGold)
+        {
+            return;
+        }
         Tile tile = tileTransform.GetComponent<Tile>();
 
         //2.타워 건설이 되어있는가
@@ -25,7 +28,8 @@ public class TowerSpawner : MonoBehaviour
         }
         tile.IsBuildTower = true;//건설 유무
         playerGold.CurrentGold -= towerBuildGold;//골드 감소
-        GameObject clone = Instantiate(towerPrefab, tileTransform.position, Quaternion.identity);//선택한 타일의 위치에 건설
+        Vector3 position = tileTransform.position + Vector3.back;                       //선택한 타일의 위치에 건설
+        GameObject clone = Instantiate(towerPrefab, position, Quaternion.identity);     // ""
         clone.GetComponent<TowerWeapon>().Setup(enemySpawner);//enemy 정보전달
     }
 }

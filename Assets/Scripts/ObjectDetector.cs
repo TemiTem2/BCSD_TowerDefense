@@ -3,7 +3,9 @@ using UnityEngine;
 public class ObjectDetector : MonoBehaviour
 {
     [SerializeField]
-    private TowerSpawner towerspawner;
+    private TowerSpawner towerSpawner;
+    [SerializeField]
+    private TowerDataViewer towerDataViewer;
 
     private Camera mainCamera;
     private Ray ray;
@@ -18,7 +20,7 @@ public class ObjectDetector : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    void Update()
+    private void Update()
     {
         //마우스 버튼눌렀을때
         if (Input.GetMouseButtonDown(0)) 
@@ -36,7 +38,12 @@ public class ObjectDetector : MonoBehaviour
                 if (hit.transform.CompareTag("Tile"))
                 {
                     //타워를 생성하는 SpanwTower() 호출
-                    towerspawner.SpawnTower(hit.transform);
+                    towerSpawner.SpawnTower(hit.transform);
+                }
+                //타워 선택시 타워 정보창 띄우기
+                else if ( hit.transform.CompareTag("Tower") )
+                {
+                    towerDataViewer.Onpanel(hit.transform);
                 }
             }
         }
