@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c5825a9bf1430ae4590d8a9348cd105f
+guid: 4cdf2ad5bf5dacb4db846952fa5d4405
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1060304132413595166
-    second: UIPanelBackground_0
+      213: -2415340737650799798
+    second: UITowerBorder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 298
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UIPanelBackground_0
+      name: UITowerBorder_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 298
-        height: 298
+        width: 181
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e1eb91620b0941f0800000000000000
-      internalID: -1060304132413595166
+      spriteID: a4b4bc8656cfa7ed0800000000000000
+      internalID: -2415340737650799798
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      UIPanelBackground_0: -1060304132413595166
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
