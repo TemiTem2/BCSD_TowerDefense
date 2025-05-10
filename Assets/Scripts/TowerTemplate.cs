@@ -12,6 +12,7 @@ public class TowerTemplate : ScriptableObject
     {
         public Sprite sprite;   //타워 이미지
         public float damage;    //공격력
+        public float slow;      //감속 퍼센트
         public float rate;      //공속
         public float range;     //공격범위
         public int cost;        //필요 골드
