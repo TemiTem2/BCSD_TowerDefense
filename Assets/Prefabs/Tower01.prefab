@@ -103,8 +103,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerTemplate: {fileID: 11400000, guid: dba479f33f41e7c48bf60a5eb78c3243, type: 2}
+  spawnPoint: {fileID: 8467307257470509322}
+  weaponType: 0
   projectilePrefab: {fileID: 3333105430601992015, guid: a0690f54f9f176c47b0f86a4bd7c5028, type: 3}
-  spawnpoint: {fileID: 8467307257470509322}
+  lineRenderer: {fileID: 0}
+  hitEffect: {fileID: 0}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &-3592564475704313142
 BoxCollider:
   m_ObjectHideFlags: 0
